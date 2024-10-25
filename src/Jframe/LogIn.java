@@ -74,12 +74,8 @@ public class LogIn extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txt_name = new app.bolivia.swing.JCTextField();
         jLabel10 = new javax.swing.JLabel();
-        txt_password = new app.bolivia.swing.JCTextField();
         jLabel11 = new javax.swing.JLabel();
-        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
-        rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -101,67 +97,17 @@ public class LogIn extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Chào mừng bạn ");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 150, 30));
-
-        txt_name.setBackground(new java.awt.Color(0, 255, 255));
-        txt_name.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(255, 255, 255)));
-        txt_name.setPlaceholder("Nhập tên đăng nhập...");
-        txt_name.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_nameFocusLost(evt);
-            }
-        });
-        txt_name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nameActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txt_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 340, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 240, 30));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tên đăng nhập :");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 250, 30));
 
-        txt_password.setBackground(new java.awt.Color(0, 255, 255));
-        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(255, 255, 255)));
-        txt_password.setPlaceholder("Nhập mật khẩu...");
-        txt_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwordActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 340, -1));
-
         jLabel11.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mật khẩu :");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 250, 30));
-
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 255, 51));
-        rSMaterialButtonCircle1.setText("ĐĂNG NHẬP");
-        rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 290, -1));
-
-        rSMaterialButtonCircle2.setText("Đăng ký");
-        rSMaterialButtonCircle2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                rSMaterialButtonCircle2MouseClicked(evt);
-                SignUp signUp = new SignUp();
-                signUp.setVisible(true);
-                dispose();
-            }
-        });
-        rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 290, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 890));
 
@@ -290,9 +236,5 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
-    private app.bolivia.swing.JCTextField txt_name;
-    private app.bolivia.swing.JCTextField txt_password;
     // End of variables declaration//GEN-END:variables
 }
