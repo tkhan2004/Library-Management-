@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="RSFoto_v1.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/../../mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../JFreeChart/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../JFreeChart/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../drive-download-20241024T144206Z-001/RojeruSan.parte1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../drive-download-20241024T144206Z-001/RSCalendar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../drive-download-20241024T144206Z-001/RSFoto_v1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
