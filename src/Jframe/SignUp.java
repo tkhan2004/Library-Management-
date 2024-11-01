@@ -309,6 +309,9 @@ public class SignUp extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2MouseClicked
         // TODO add your handling code here:
+        
+        
+       
     }//GEN-LAST:event_rSMaterialButtonCircle2MouseClicked
 
     private void txt_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_nameFocusLost

@@ -232,6 +232,10 @@ public class LogIn extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2MouseClicked
         // TODO add your handling code here:
+        SignUp pageSignUp = new SignUp();
+       pageSignUp.setVisible(true);
+       dispose();
+        
     }//GEN-LAST:event_rSMaterialButtonCircle2MouseClicked
 
     private void txt_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_nameFocusLost
