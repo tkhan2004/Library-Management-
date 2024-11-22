@@ -71,6 +71,7 @@ public class LogIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -83,49 +84,51 @@ public class LogIn extends javax.swing.JFrame {
         rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/download.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("ĐĂNG Nhập");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 160, 30));
+        jLabel7.setText("ĐĂNG NHẬP");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 160, 30));
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Chào mừng, đăng nhập tài khoản");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 330, 30));
+        jLabel8.setText("Chào mừng bạn, hãy đăng nhập tài khoản");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 400, 30));
 
-        jLabel10.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tên đăng nhập :");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 30));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 30));
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mật khẩu :");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 160, 30));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 110, 30));
 
-        txt_password.setBackground(new java.awt.Color(0, 204, 204));
         txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_password.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_password.setPlaceholder("Mật Khẩu . . . . .");
         txt_password.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_password.setSelectionColor(new java.awt.Color(0, 204, 204));
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, -1, -1));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
-        txt_username.setBackground(new java.awt.Color(0, 204, 204));
         txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_username.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_username.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        txt_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_username.setPlaceholder("Tên Đăng Nhập . . . . .");
         txt_username.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_username.setSelectionColor(new java.awt.Color(0, 204, 204));
@@ -134,17 +137,19 @@ public class LogIn extends javax.swing.JFrame {
                 txt_usernameFocusLost(evt);
             }
         });
-        jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Account_50px.png"))); // NOI18N
+        txt_username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_usernameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Forgot_Password_50px_4.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 102, 102));
-        rSMaterialButtonCircle1.setForeground(new java.awt.Color(255, 204, 102));
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(255, 255, 255));
+        rSMaterialButtonCircle1.setForeground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle1.setText("ĐĂNG KÝ");
+        rSMaterialButtonCircle1.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         rSMaterialButtonCircle1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonCircle1MouseClicked(evt);
@@ -157,9 +162,10 @@ public class LogIn extends javax.swing.JFrame {
         });
         jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, 320, 70));
 
-        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 102, 102));
-        rSMaterialButtonCircle2.setForeground(new java.awt.Color(255, 204, 102));
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 255, 255));
+        rSMaterialButtonCircle2.setForeground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle2.setText("ĐĂNG NHẬP");
+        rSMaterialButtonCircle2.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle2ActionPerformed(evt);
@@ -172,17 +178,12 @@ public class LogIn extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel3.setText("THƯ VIỆN ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 270, 30));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 0, 51));
+        jLabel5.setText("GIỚI THIỆU VỀ THƯ VIỆN");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 490, 60));
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel5.setText("CHÀO MỪNG BẠN ĐẾN ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 270, 30));
-
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("X");
         jButton1.setAlignmentX(1.0F);
         jButton1.setAlignmentY(1.0F);
@@ -200,8 +201,17 @@ public class LogIn extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 50, 50));
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(102, 0, 51));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Thư viện trường Đại học Công nghệ Giao thông Vận tải (UTH) là một trong những đơn vị hỗ trợ học tập và nghiên cứu hàng đầu, đóng vai trò quan trọng trong việc cung cấp tri thức và tạo dựng môi trường học thuật hiện đại cho sinh viên, giảng viên và cán bộ nhà trường.\n\nCơ sở vật chất hiện đại\nThư viện UTH được xây dựng với không gian rộng rãi, trang bị hiện đại, đảm bảo đáp ứng mọi nhu cầu của người dùng. Khu vực đọc sách được bố trí khoa học, ánh sáng phù hợp, tạo không gian học tập thoải mái. Ngoài ra, thư viện còn trang bị các phòng tự học, khu vực nghiên cứu nhóm và máy tính kết nối Internet tốc độ cao.\n\nNguồn tài liệu phong phú\nThư viện sở hữu một nguồn tài nguyên đa dạng, bao gồm:\n\nSách chuyên ngành: Tập trung vào các lĩnh vực kỹ thuật, công nghệ giao thông vận tải, kinh tế và quản lý.\nTài liệu điện tử: Bao gồm các cơ sở dữ liệu học thuật, tài liệu số hóa, và bài báo khoa học quốc tế.\nTạp chí và báo cáo: Các ấn phẩm định kỳ cập nhật những nghiên cứu mới nhất và các xu hướng công nghệ hiện đại.\nLuận văn, luận án: Các nghiên cứu khoa học và đồ án tốt nghiệp của sinh viên, giảng viên.\nDịch vụ hỗ trợ đa dạng\nHỗ trợ mượn/trả tài liệu: Thư viện cung cấp dịch vụ mượn sách nhanh chóng, tiện lợi với hệ thống quản lý bằng mã vạch.\nTư vấn tìm kiếm thông tin: Đội ngũ cán bộ thư viện sẵn sàng hỗ trợ sinh viên, giảng viên trong việc tìm kiếm và sử dụng tài liệu.\nTổ chức hội thảo, chuyên đề: Định kỳ, thư viện tổ chức các buổi giao lưu, chia sẻ kinh nghiệm học tập, nghiên cứu khoa học.\nHỗ trợ tài nguyên trực tuyến: Truy cập tài liệu qua hệ thống thư viện số hiện đại, mọi lúc, mọi nơi.\nĐịnh hướng phát triển\nThư viện UTH không ngừng nâng cấp hệ thống quản lý, mở rộng nguồn tài liệu và cải thiện các dịch vụ nhằm đáp ứng tốt hơn nhu cầu học tập, nghiên cứu của sinh viên. Mục tiêu là xây dựng một thư viện thông minh, trở thành trung tâm tri thức hiện đại, góp phần nâng cao chất lượng đào tạo và nghiên cứu tại trường.\n\nVới vai trò là cầu nối tri thức, thư viện Đại học UTH luôn đồng hành cùng sinh viên và giảng viên, thúc đẩy sự sáng tạo và đổi mới trong học tập cũng như nghiên cứu.");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 700, 340));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/download.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 590, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 590, 100));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 740, 830));
 
@@ -216,6 +226,8 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
+
+
         if(ValidateLogin()){
         login();
     }
@@ -245,6 +257,10 @@ public class LogIn extends javax.swing.JFrame {
         page.setVisible(true);
         dispose();
     }//GEN-LAST:event_rSMaterialButtonCircle1MouseClicked
+
+    private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_usernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,7 +303,7 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -295,6 +311,8 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private app.bolivia.swing.JCTextField txt_password;

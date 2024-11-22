@@ -162,115 +162,115 @@ public class ReturnBook extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         rSMaterialButtonCircle5 = new rojerusan.RSMaterialButtonCircle();
-        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel_main.setBackground(new java.awt.Color(255, 255, 255));
+        panel_main.setBackground(new java.awt.Color(0, 0, 0));
+        panel_main.setForeground(new java.awt.Color(102, 102, 255));
         panel_main.setToolTipText("");
         panel_main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
         jLabel1.setText("Book Details");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 340, 110));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 330, 5));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 440, 5));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ngày Phát Hành:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("ID Trả:");
+        jLabel3.setText("ID Trả Sách:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tên Sách:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Tên Sinh viên:");
+        jLabel5.setText("Tên Sinh Viên:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
         lbl_issueDate.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_issueDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbl_issueDate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_issueDate.setForeground(new java.awt.Color(255, 255, 255));
         lbl_issueDate.setToolTipText("");
-        lbl_issueDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 10, new java.awt.Color(153, 153, 153)));
-        jPanel1.add(lbl_issueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 190, 40));
+        lbl_issueDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 6, new java.awt.Color(255, 255, 255)));
+        jPanel1.add(lbl_issueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 190, 40));
 
         lbl_studentName.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_studentName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbl_studentName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_studentName.setForeground(new java.awt.Color(255, 255, 255));
         lbl_studentName.setToolTipText("");
-        lbl_studentName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 10, new java.awt.Color(153, 153, 153)));
-        jPanel1.add(lbl_studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 190, 40));
+        lbl_studentName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 6, new java.awt.Color(255, 255, 255)));
+        jPanel1.add(lbl_studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 190, 40));
 
         lbl_bookName.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_bookName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbl_bookName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_bookName.setForeground(new java.awt.Color(255, 255, 255));
         lbl_bookName.setToolTipText("");
-        lbl_bookName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 10, new java.awt.Color(153, 153, 153)));
-        jPanel1.add(lbl_bookName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 190, 40));
+        lbl_bookName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 6, new java.awt.Color(255, 255, 255)));
+        jPanel1.add(lbl_bookName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 190, 40));
 
         lbl_issueId.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_issueId.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbl_issueId.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_issueId.setForeground(new java.awt.Color(255, 255, 255));
         lbl_issueId.setToolTipText("");
-        lbl_issueId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 10, new java.awt.Color(153, 153, 153)));
-        jPanel1.add(lbl_issueId, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 190, 40));
+        lbl_issueId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 6, new java.awt.Color(255, 255, 255)));
+        jPanel1.add(lbl_issueId, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 190, 40));
 
         lbl_bookError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lbl_bookError.setForeground(new java.awt.Color(255, 255, 0));
         jPanel1.add(lbl_bookError, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 330, 50));
 
         lbl_dueDate.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_dueDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbl_dueDate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_dueDate.setForeground(new java.awt.Color(255, 255, 255));
         lbl_dueDate.setToolTipText("");
-        lbl_dueDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 10, new java.awt.Color(153, 153, 153)));
-        jPanel1.add(lbl_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 560, 190, 40));
+        lbl_dueDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 6, new java.awt.Color(255, 255, 255)));
+        jPanel1.add(lbl_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 190, 40));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Ngày Trả Sách:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, -1, -1));
 
         panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 0, 440, 810));
 
-        jLabel17.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        jLabel17.setText("   Trả sách");
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
+        jLabel17.setText("   TRẢ SÁCH");
         panel_main.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 130, -1, -1));
 
-        jPanel7.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setForeground(new java.awt.Color(204, 0, 51));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -301,7 +301,7 @@ public class ReturnBook extends javax.swing.JFrame {
 
         panel_main.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 0, 50, 50));
 
-        txt_studentId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 10, new java.awt.Color(102, 102, 102)));
+        txt_studentId.setBorder(null);
         txt_studentId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_studentId.setPlaceholder("Nhập id sinh viên...");
         txt_studentId.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -317,12 +317,12 @@ public class ReturnBook extends javax.swing.JFrame {
         panel_main.add(txt_studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 410, 340, -1));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("ID Sinh Viên :");
-        panel_main.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 380, 140, 30));
+        panel_main.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 380, 160, 30));
 
-        txt_bookId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 10, new java.awt.Color(0, 0, 0)));
+        txt_bookId.setBorder(null);
         txt_bookId.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         txt_bookId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_bookId.setPlaceholder("Nhập id sách...");
@@ -338,14 +338,14 @@ public class ReturnBook extends javax.swing.JFrame {
         });
         panel_main.add(txt_bookId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 300, 340, -1));
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("ID Sách :");
-        panel_main.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 270, 180, 30));
+        panel_main.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 270, 100, 30));
 
-        rSMaterialButtonCircle4.setBackground(new java.awt.Color(0, 0, 153));
+        rSMaterialButtonCircle4.setBackground(new java.awt.Color(102, 102, 102));
         rSMaterialButtonCircle4.setText("Trả Sách");
-        rSMaterialButtonCircle4.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        rSMaterialButtonCircle4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         rSMaterialButtonCircle4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle4ActionPerformed(evt);
@@ -383,18 +383,16 @@ public class ReturnBook extends javax.swing.JFrame {
 
         panel_main.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
 
-        rSMaterialButtonCircle5.setBackground(new java.awt.Color(0, 0, 0));
-        rSMaterialButtonCircle5.setText("Tìm");
-        rSMaterialButtonCircle5.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        rSMaterialButtonCircle5.setBackground(new java.awt.Color(255, 255, 255));
+        rSMaterialButtonCircle5.setForeground(new java.awt.Color(0, 0, 0));
+        rSMaterialButtonCircle5.setText("TÌM SÁCH");
+        rSMaterialButtonCircle5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         rSMaterialButtonCircle5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle5ActionPerformed(evt);
             }
         });
         panel_main.add(rSMaterialButtonCircle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 500, 350, 70));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/download.png"))); // NOI18N
-        panel_main.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 480, 210));
 
         getContentPane().add(panel_main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1530, 810));
 
@@ -492,7 +490,6 @@ public class ReturnBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

@@ -272,7 +272,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel4.setText("Welcome, Admin");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, -1, 50));
 
-        jPanel4.setBackground(new java.awt.Color(153, 0, 51));
+        jPanel4.setBackground(new java.awt.Color(102, 0, 51));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -314,7 +314,7 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 340, 66));
 
-        jPanel7.setBackground(new java.awt.Color(153, 0, 51));
+        jPanel7.setBackground(new java.awt.Color(102, 0, 51));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -546,7 +546,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel22.setText("Defaulter List");
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 20, -1, -1));
 
-        jPanel20.setBorder(javax.swing.BorderFactory.createMatteBorder(30, 0, 0, 0, new java.awt.Color(102, 102, 0)));
+        jPanel20.setBorder(javax.swing.BorderFactory.createMatteBorder(30, 0, 0, 0, new java.awt.Color(102, 102, 102)));
         jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_defaulterList.setFont(new java.awt.Font("Tahoma", 1, 50)); // NOI18N

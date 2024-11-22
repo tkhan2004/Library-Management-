@@ -161,7 +161,6 @@ public void clearTable(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rSMaterialButtonCircle2 = new necesario.RSMaterialButtonCircle();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -187,8 +186,6 @@ public void clearTable(){
         tbl_studentDetails = new rojeru_san.complementos.RSTableMetro();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-
-        rSMaterialButtonCircle2.setText("rSMaterialButtonCircle2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -541,7 +538,6 @@ public void clearTable(){
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
-    private necesario.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle4;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle5;
