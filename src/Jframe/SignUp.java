@@ -136,66 +136,65 @@ public class SignUp extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("ĐĂNG KÝ");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 160, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 190, 50));
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("ĐĂNG KÝ tài khoản mới tại đây");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 310, 30));
+        jLabel8.setText("ĐĂNG KÝ TÀI KHOẢN MỚI TẠI ĐÂY");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 350, 30));
 
-        jLabel10.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tên đăng nhập :");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 30));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 160, 30));
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mật khẩu :");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 160, 30));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 160, 30));
 
-        jLabel13.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Email :");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 160, 30));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 160, 30));
 
-        jLabel15.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Số điện thoại :");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 160, 30));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 160, 30));
 
         txt_contact.setBackground(new java.awt.Color(0, 204, 204));
         txt_contact.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_contact.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_contact.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_contact.setPlaceholder("Số Điện Thoại . . . . .");
         txt_contact.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_contact.setSelectionColor(new java.awt.Color(0, 204, 204));
-        jPanel2.add(txt_contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Google_Mobile_50px.png"))); // NOI18N
+        jPanel2.add(txt_contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, -1, -1));
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
 
         txt_password.setBackground(new java.awt.Color(0, 204, 204));
         txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_password.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_password.setPlaceholder("Mật Khẩu . . . . .");
         txt_password.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_password.setSelectionColor(new java.awt.Color(0, 204, 204));
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, -1, -1));
 
         txt_email.setBackground(new java.awt.Color(0, 204, 204));
         txt_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_email.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_email.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_email.setPlaceholder("Email . . . . .");
         txt_email.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_email.setSelectionColor(new java.awt.Color(0, 204, 204));
-        jPanel2.add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, -1, -1));
+        jPanel2.add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, -1, -1));
 
         txt_username.setBackground(new java.awt.Color(0, 204, 204));
         txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txt_username.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_username.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        txt_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_username.setPlaceholder("Tên Đăng Nhập . . . . .");
         txt_username.setSelectedTextColor(new java.awt.Color(51, 51, 51));
         txt_username.setSelectionColor(new java.awt.Color(0, 204, 204));
@@ -204,33 +203,25 @@ public class SignUp extends javax.swing.JFrame {
                 txt_usernameFocusLost(evt);
             }
         });
-        jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Account_50px.png"))); // NOI18N
+        jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Forgot_Password_50px_4.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Secured_Letter_50px.png"))); // NOI18N
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 102, 102));
-        rSMaterialButtonCircle1.setForeground(new java.awt.Color(255, 204, 102));
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle1.setText("ĐĂNG KÝ");
+        rSMaterialButtonCircle1.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle1ActionPerformed(evt);
             }
         });
         jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, 320, 70));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Google_Mobile_50px.png"))); // NOI18N
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
 
-        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 102, 102));
-        rSMaterialButtonCircle2.setForeground(new java.awt.Color(255, 204, 102));
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle2.setText("ĐĂNG NHẬP");
+        rSMaterialButtonCircle2.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         rSMaterialButtonCircle2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonCircle2MouseClicked(evt);
@@ -243,17 +234,18 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("THƯ VIỆN ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 400, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 260, 70));
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("CHÀO MỪNG BẠN ĐẾN ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 400, 50));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 560, 150));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 102, 102));
         jButton1.setText("X");
         jButton1.setAlignmentX(1.0F);
         jButton1.setAlignmentY(1.0F);
@@ -272,7 +264,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 50, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/download.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 590, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 590, 100));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 740, 830));
 
