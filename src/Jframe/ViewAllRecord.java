@@ -147,14 +147,14 @@ public class ViewAllRecord extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(20, 102, 51));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
-        jLabel1.setText("Issue Book Details");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, -1, -1));
+        jLabel1.setText("Xử lý chi tiết sách");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, -1, -1));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -175,20 +175,25 @@ public class ViewAllRecord extends javax.swing.JFrame {
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 180, 40));
 
         date_toDate.setColorForeground(new java.awt.Color(0, 0, 0));
-        date_toDate.setPlaceholder("Ngày phát hành . . . . .");
+        date_toDate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        date_toDate.setFuente(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        date_toDate.setPlaceholder("Nhập ngày mượn sách . . . ");
         jPanel1.add(date_toDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, 340, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Ngày Phát Hành :");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 180, 40));
+        jLabel11.setText("Ngày mượn sách :");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 180, 40));
 
         date_fromDate.setColorForeground(new java.awt.Color(0, 0, 0));
-        date_fromDate.setPlaceholder("Ngày trả sách . . . . .");
+        date_fromDate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        date_fromDate.setFuente(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        date_fromDate.setPlaceholder("Nhập ngày trả sách . . . ");
         jPanel1.add(date_fromDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 340, -1));
 
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(51, 51, 51));
-        rSMaterialButtonCircle1.setText("Tìm");
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(0, 0, 0));
+        rSMaterialButtonCircle1.setText("TÌM KIẾM");
+        rSMaterialButtonCircle1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle1ActionPerformed(evt);
@@ -196,9 +201,9 @@ public class ViewAllRecord extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 200, 170, 60));
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel7.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
@@ -242,7 +247,8 @@ public class ViewAllRecord extends javax.swing.JFrame {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 0, 50, -1));
 
-        rSMaterialButtonCircle2.setText("Tất Cả");
+        rSMaterialButtonCircle2.setText("TẤT CẢ");
+        rSMaterialButtonCircle2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         rSMaterialButtonCircle2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rSMaterialButtonCircle2MouseClicked(evt);
@@ -260,16 +266,15 @@ public class ViewAllRecord extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Tên Sách", "ID Sinh Viên", "Ngày Phát Hành", "Ngày Trả Sách", "Trạng Thái"
+                "ID sách", "Tên Sách", "ID Sinh Viên", "Ngày mượn sách", "Ngày Trả Sách", "Trạng Thái"
             }
         ));
-        tbl_issueBookDetails.setColorBackgoundHead(new java.awt.Color(153, 153, 153));
-        tbl_issueBookDetails.setColorBordeFilas(new java.awt.Color(102, 102, 102));
+        tbl_issueBookDetails.setColorBackgoundHead(new java.awt.Color(0, 0, 0));
         tbl_issueBookDetails.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_issueBookDetails.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         tbl_issueBookDetails.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
         tbl_issueBookDetails.setColorSelBackgound(new java.awt.Color(0, 0, 0));
-        tbl_issueBookDetails.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbl_issueBookDetails.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tbl_issueBookDetails.setIntercellSpacing(new java.awt.Dimension(1, 1));
         tbl_issueBookDetails.setRowHeight(40);
         tbl_issueBookDetails.addMouseListener(new java.awt.event.MouseAdapter() {

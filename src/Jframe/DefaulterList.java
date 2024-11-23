@@ -93,10 +93,10 @@ public class DefaulterList extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 230, 10));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 0, 51));
+        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Edit_Property_50px.png"))); // NOI18N
-        jLabel2.setText("Defaulter List");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        jLabel2.setText("Danh sách chưa trả đúng hạn");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -107,6 +107,8 @@ public class DefaulterList extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 51, 51));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
         jLabel1.setText("back");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {

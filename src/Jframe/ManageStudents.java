@@ -200,7 +200,7 @@ public void clearTable(){
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
-        jLabel7.setText("Back");
+        jLabel7.setText("Trở lại");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
@@ -212,8 +212,8 @@ public void clearTable(){
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 5, Short.MAX_VALUE))
+                .addComponent(jLabel7)
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,7 +357,7 @@ public void clearTable(){
 
             },
             new String [] {
-                "Student Id", "Name", "Course", "Branch"
+                "ID sinh viên", "Họ và tên sinh viên", "Niên khóa", "Chuyên ngành"
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(102, 102, 102));
@@ -381,7 +381,7 @@ public void clearTable(){
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/students.png"))); // NOI18N
-        jLabel1.setText(" Manage Students");
+        jLabel1.setText("Quản lý sinh viên");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, 100));
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));

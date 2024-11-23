@@ -253,7 +253,7 @@ public class HomePage extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Library Management System");
+        jLabel3.setText("HỆ THỐNG QUẢN LÝ THƯ VIỆN SINH VIÊN");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, 50));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -269,8 +269,8 @@ public class HomePage extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/male_user_50px.png"))); // NOI18N
-        jLabel4.setText("Welcome, Admin");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, -1, 50));
+        jLabel4.setText("CHÀO MỪNG BẠN");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, 230, 50));
 
         jPanel4.setBackground(new java.awt.Color(102, 0, 51));
 
@@ -295,10 +295,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
-        jLabel5.setText("Return Books");
+        jLabel5.setText("Trả sách");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -320,7 +320,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Home_26px_2.png"))); // NOI18N
-        jLabel6.setText("Home Page");
+        jLabel6.setText("Trang chủ");
         jPanel7.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 340, 66));
@@ -328,10 +328,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(51, 51, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Library_26px_1.png"))); // NOI18N
-        jLabel7.setText("LMS Dashboard");
+        jLabel7.setText("Bảng thống kê");
         jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jPanel5.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 340, 66));
@@ -339,9 +339,9 @@ public class HomePage extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Features");
+        jLabel8.setText("Tính năng");
         jPanel9.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jPanel5.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 340, 66));
@@ -349,10 +349,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(51, 51, 51));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Book_26px.png"))); // NOI18N
-        jLabel9.setText("Manage Books");
+        jLabel9.setText("Quản lý sách");
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
@@ -371,10 +371,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Read_Online_26px.png"))); // NOI18N
-        jLabel10.setText("Manage Student");
+        jLabel10.setText("Quản lý sinh viên");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel10MouseClicked(evt);
@@ -393,10 +393,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(51, 51, 51));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Sell_26px.png"))); // NOI18N
-        jLabel11.setText("Issue Books");
+        jLabel11.setText("Giải quyết sách");
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel11MouseClicked(evt);
@@ -415,10 +415,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(51, 51, 51));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_View_Details_26px.png"))); // NOI18N
-        jLabel12.setText("View Records");
+        jLabel12.setText("Bảng theo dõi");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel12MouseClicked(evt);
@@ -437,7 +437,7 @@ public class HomePage extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(51, 51, 51));
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Books_26px.png"))); // NOI18N
         jLabel13.setText("View Issued Books");
@@ -459,7 +459,7 @@ public class HomePage extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(51, 51, 51));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Conference_26px.png"))); // NOI18N
         jLabel14.setText("Defaulter List");
@@ -481,10 +481,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(0, 153, 153));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/adminIcons/icons8_Exit_26px.png"))); // NOI18N
-        jLabel15.setText("Logout");
+        jLabel15.setText("Đăng xuất");
         jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel15MouseClicked(evt);
@@ -510,12 +510,12 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel3.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 260, 140));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel17.setText("Student Details");
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel17.setText("Chi tiết sinh viên");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel18.setText("No Of Students");
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel18.setText("Tổng số sinh viên");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
         jPanel18.setBorder(javax.swing.BorderFactory.createMatteBorder(30, 0, 0, 0, new java.awt.Color(102, 0, 51)));
@@ -528,8 +528,8 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel3.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 260, 140));
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel20.setText("Issued Books");
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel20.setText("Xử lý sách");
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
 
         jPanel19.setBorder(javax.swing.BorderFactory.createMatteBorder(30, 0, 0, 0, new java.awt.Color(0, 0, 0)));
@@ -542,7 +542,7 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel3.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, 260, 140));
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel22.setText("Defaulter List");
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 20, -1, -1));
 
@@ -561,7 +561,7 @@ public class HomePage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "StudentID", "Name", "Course", "Branch"
+                "ID sinh viên", "Họ và tên sinh viên", "Niên khóa", "Chuyên ngành"
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(0, 0, 0));
@@ -577,12 +577,12 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 700, 220));
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel24.setText("No Of Books");
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel24.setText("Tổng số sách");
         jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel25.setText("Book Details");
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel25.setText("Chi tiết sách");
         jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
 
         tbl_bookDetails.setModel(new javax.swing.table.DefaultTableModel(
@@ -590,7 +590,7 @@ public class HomePage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "BookID", "Name", "Author", "Quantity"
+                "ID sách", "Tên sách", "Tác giả", "Số lượng"
             }
         ));
         tbl_bookDetails.setColorBackgoundHead(new java.awt.Color(0, 0, 0));
