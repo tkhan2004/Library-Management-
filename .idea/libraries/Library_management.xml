@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Library_management">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/drive-download-20241024T144206Z-001/RSCalendar.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/drive-download-20241024T144206Z-001/RojeruSan.parte1.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/drive-download-20241024T144206Z-001/RSFoto_v1.0.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/JFreeChart/jcommon-1.0.23.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/JFreeChart/jfreechart-1.0.19.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/RojeruSan.parte1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/RSCalendar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SrcThuVien/RSFoto_v1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

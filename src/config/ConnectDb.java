@@ -25,7 +25,7 @@ public class ConnectDb {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Kết nối với MySQL: cập nhật URL, username và password
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3366/library_ms",
+                    "jdbc:mysql://localhost:3306/library_ms",
                     "root",""
             );
 
