@@ -69,7 +69,7 @@ public class AdminLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -118,8 +118,14 @@ public class AdminLogin extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 170, 60));
 
+        txt_adminpass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         txt_adminpass.setForeground(new java.awt.Color(0, 0, 0));
         txt_adminpass.setText("rSPasswordTextPlaceHolder1");
+        txt_adminpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_adminpassActionPerformed(evt);
+            }
+        });
         jPanel1.add(txt_adminpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 350));
@@ -140,6 +146,10 @@ public class AdminLogin extends javax.swing.JFrame {
             adminLogin();
         }
     }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
+
+    private void txt_adminpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_adminpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_adminpassActionPerformed
 
     /**
      * @param args the command line arguments
