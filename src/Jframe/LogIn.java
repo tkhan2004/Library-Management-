@@ -10,7 +10,7 @@ import config.ConnectDb;
 
 import javax.swing.*;
 import java.sql.*;
-
+import dao.ValidateLogin;
 /**
  *
  * @author Admin
@@ -24,24 +24,17 @@ public class LogIn extends javax.swing.JFrame {
     public LogIn() {
         initComponents();
     }
-    public boolean ValidateLogin(){
+    public boolean validateLoginForm() {
         String name = txt_username.getText();
         String pwd = txt_password.getText();
-        if (name.equals("")){
-            JOptionPane.showMessageDialog(this, "Please enter your name");
-            return false;
-        }if (pwd.equals("")){
-            JOptionPane.showMessageDialog(this, "Please enter your pasword");
-            return false;
-        }
-        return true;
+        return ValidateLogin.validateLogin(name, pwd);
     }
     public void login(){
         String name = txt_username.getText();
         String pwd = txt_password.getText();
         Connection con = ConnectDb.getConnection();
         try {
-            PreparedStatement pst = con.prepareStatement("SELECT * FROM users where name = ? and password = ?");
+            PreparedStatement pst = con.prepareStatement("SELECT * FROM staffs where staff_username = ? and staff_password = ?");
             pst.setString(1,name);
             pst.setString(2,pwd);
             pst.executeQuery();
@@ -228,7 +221,7 @@ public class LogIn extends javax.swing.JFrame {
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
 
 
-        if(ValidateLogin()){
+        if(validateLoginForm()){
         login();
     }
     }//GEN-LAST:event_rSMaterialButtonCircle2ActionPerformed

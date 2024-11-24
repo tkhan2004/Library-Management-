@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3366
--- Generation Time: Nov 13, 2024 at 12:30 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 23, 2024 at 11:06 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,7 +46,8 @@ INSERT INTO `book_details` (`book_id`, `book_name`, `author`, `quantity`) VALUES
 (5, 'The Pragmatic Programmer', 'Andy Hunt', 5),
 (6, 'Doraemon: Nobita và chuyến phiêu lưu vào xứ quỷ', 'Fujiko F.Fujio', 10),
 (7, 'Truc\'\'s Books', 'Minh Chực', 69),
-(8, 'I-chan is me-chan', 'Nguyễn Tấn Dồng', 6);
+(8, 'I-chan is me-chan', 'Nguyễn Tấn Dồng', 6),
+(9, 'Haha', 'Khang', 2);
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,27 @@ INSERT INTO `issue_book_details` (`id`, `book_id`, `book_name`, `student_id`, `s
 (12, 5, 'The Pragmatic Programmer', 4, 'Nguyễn Gia Cường', '2024-11-03', '2024-11-30', 'pending'),
 (14, 1, 'The Godather', 2, 'Nguyễn Thanh Khang', '2024-11-05', '2024-11-29', 'returned'),
 (15, 5, 'The Pragmatic Programmer', 5, 'Nguyễn Văn A', '2024-11-01', '2024-11-11', 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staffs`
+--
+
+CREATE TABLE `staffs` (
+  `staff_id` int(11) NOT NULL,
+  `staff_fullname` varchar(50) NOT NULL,
+  `staff_username` varchar(50) NOT NULL,
+  `staff_contact` varchar(50) NOT NULL,
+  `staff_password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `staffs`
+--
+
+INSERT INTO `staffs` (`staff_id`, `staff_fullname`, `staff_username`, `staff_contact`, `staff_password`) VALUES
+(1, 'khang dep trai', 'khangkeke', '123213123123', '1');
 
 -- --------------------------------------------------------
 
@@ -109,48 +131,33 @@ INSERT INTO `student_details` (`student_id`, `name`, `school_year`, `branch`) VA
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `contact` varchar(50) DEFAULT NULL
+  `password` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `password`, `email`, `contact`) VALUES
-(5, '1', '1', 'khang@gmail.com', '1'),
-(6, '1', '1', 'khang@gmail.com', '1'),
-(7, 'khang', '1', 'khang@gmail.com', '0123493456'),
-(8, 'khang', '1', 'khang@gmail.com', '0123493456'),
-(9, 'khang123', '1', 'khang2@gmail.com', '1234567879'),
-(10, 'khang123', '1', 'khang2@gmail.com', '1234567879'),
-(11, 'khang3', '1', 'tas@gmail.com', '1234567879'),
-(12, 'khang3', '1', 'tas@gmail.com', '1234567879'),
-(13, '2', '2', '2@gmail.com', '2'),
-(14, '10', '10', '10@gmail.com', '10101010101010101010');
+INSERT INTO `users` (`id`, `name`, `password`) VALUES
+(5, '1', '1'),
+(6, '1', '1'),
+(7, 'khang', '1'),
+(8, 'khang', '1'),
+(9, 'khang123', '1'),
+(10, 'khang123', '1'),
+(11, 'khang3', '1'),
+(12, 'khang3', '1'),
+(13, 'khang113', '1');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `book_details`
+-- Indexes for table `staffs`
 --
-ALTER TABLE `book_details`
-  ADD PRIMARY KEY (`book_id`);
-
---
--- Indexes for table `issue_book_details`
---
-ALTER TABLE `issue_book_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `student_details`
---
-ALTER TABLE `student_details`
-  ADD PRIMARY KEY (`student_id`);
+ALTER TABLE `staffs`
+  ADD PRIMARY KEY (`staff_id`);
 
 --
 -- Indexes for table `users`
@@ -163,28 +170,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `book_details`
---
-ALTER TABLE `book_details`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `issue_book_details`
---
-ALTER TABLE `issue_book_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `student_details`
---
-ALTER TABLE `student_details`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
