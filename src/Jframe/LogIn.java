@@ -79,7 +79,6 @@ public class LogIn extends javax.swing.JFrame {
         txt_username = new app.bolivia.swing.JCTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -144,22 +143,6 @@ public class LogIn extends javax.swing.JFrame {
         jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
-
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(255, 255, 255));
-        rSMaterialButtonCircle1.setForeground(new java.awt.Color(0, 0, 0));
-        rSMaterialButtonCircle1.setText("ĐĂNG KÝ");
-        rSMaterialButtonCircle1.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
-        rSMaterialButtonCircle1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                rSMaterialButtonCircle1MouseClicked(evt);
-            }
-        });
-        rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, 320, 70));
 
         rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 255, 255));
         rSMaterialButtonCircle2.setForeground(new java.awt.Color(0, 0, 0));
@@ -250,22 +233,19 @@ public class LogIn extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        AdminLogin AL = new AdminLogin();
+        AL.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
 
         if(validateLoginForm()){
             login();
         }
     }//GEN-LAST:event_rSMaterialButtonCircle2ActionPerformed
-
-    private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
-
-    }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
-
-    private void rSMaterialButtonCircle1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1MouseClicked
-        SignUp page = new SignUp();
-        page.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_rSMaterialButtonCircle1MouseClicked
 
     private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
         // TODO add your handling code here:
@@ -274,13 +254,6 @@ public class LogIn extends javax.swing.JFrame {
     private void txt_usernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_usernameFocusLost
 
     }//GEN-LAST:event_txt_usernameFocusLost
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         AdminLogin AL = new AdminLogin();
-        AL.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,7 +307,6 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private app.bolivia.swing.JCTextField txt_password;
     private app.bolivia.swing.JCTextField txt_username;

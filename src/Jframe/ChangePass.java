@@ -26,48 +26,61 @@ import java.sql.SQLException;
  * @author dell
  */
 public class ChangePass extends javax.swing.JFrame {
-    public static String currentUsername;
-    public void changePassword(){
-        String oldPassword = String.valueOf(jPasswordField1.getPassword());
-        String newPassword = String.valueOf(jPasswordField2.getPassword());
-        String confirmPassword = String.valueOf(jPasswordField4.getPassword());
-        
-        if(!newPassword.equals(confirmPassword)){
-            JOptionPane.showMessageDialog(this,"Mật khẩu mới không khớp với xác nhận");
-            return;
-        }
-       Connection con = ConnectDb.getConnection();
-       if(con == null){
-           JOptionPane.showMessageDialog(this,"Kết nối cơ sở dữ liệu thất bại");
-           return;
-       }
-        try {
-            String query = "SELECT * FROM staffs WHERE staff_username = ? AND staff_password = ?";
-            PreparedStatement stmt = con.prepareStatement(query);
-            stmt.setString(1,currentUsername);
-            stmt.setString(2,oldPassword);
-            
-            ResultSet rs = stmt.executeQuery();
-            
-            if(rs.next()){
-                // mật khẩu cũ đúng, tiến hành thay đổi mật khẩu mới
-                String updateQuery = "UPDATE staffs SET password = ? WHERE staff_username = ?";
-                PreparedStatement updateStmt = con.prepareStatement(updateQuery);
-                updateStmt.setString(1, newPassword);
-                updateStmt.setString(2, currentUsername);
-                updateStmt.executeUpdate();
-                JOptionPane.showMessageDialog(this,"Thay đổi mật khẩu thành công");
-                
-            }
-            else{
-                JOptionPane.showMessageDialog(this,"Mật khẩu cũ không đúng!");
-            }
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this,"Có lỗi xảy ra trong quá trình thay đổi mật khẩu");
-        }
+    public boolean changePassword(String username, char[] oldPassword, char[] newPassword, char[] confirmPassword) {
+    // Kết nối cơ sở dữ liệu
+    Connection con = ConnectDb.getConnection();
+    if (con == null) {
+        JOptionPane.showMessageDialog(null, "Kết nối cơ sở dữ liệu thất bại!");
+        return false;
     }
+
+    try {
+        // Kiểm tra mật khẩu cũ
+        String query = "SELECT * FROM staffs WHERE staff_username = ? AND staff_password = ?";
+        PreparedStatement pst = con.prepareStatement(query);
+        pst.setString(1, username.trim()); // Loại bỏ khoảng trắng không mong muốn
+        pst.setString(2, new String(oldPassword).trim()); // Chuyển char[] sang String và loại bỏ khoảng trắng
+
+        ResultSet rs = pst.executeQuery();
+        if (rs.next()) {
+            // Mật khẩu cũ đúng, tiếp tục kiểm tra mật khẩu mới
+            if (new String(newPassword).equals(new String(confirmPassword))) {
+                // Cập nhật mật khẩu mới
+                String updateQuery = "UPDATE staffs SET staff_password = ? WHERE staff_username = ?";
+                PreparedStatement updateStmt = con.prepareStatement(updateQuery);
+                updateStmt.setString(1, new String(newPassword).trim());
+                updateStmt.setString(2, username.trim());
+
+                int rowCount = updateStmt.executeUpdate();
+                if (rowCount > 0) {
+                    JOptionPane.showMessageDialog(null, "Thay đổi mật khẩu thành công!");
+                    return true;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Không thể thay đổi mật khẩu, thử lại sau!");
+                    return false;
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Mật khẩu mới không khớp với xác nhận!");
+                return false;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Mật khẩu cũ không đúng!");
+            return false;
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Có lỗi xảy ra trong quá trình thay đổi mật khẩu!");
+        return false;
+    } finally {
+        // Dọn sạch mảng mật khẩu để bảo mật
+        java.util.Arrays.fill(oldPassword, '\0');
+        java.util.Arrays.fill(newPassword, '\0');
+        java.util.Arrays.fill(confirmPassword, '\0');
+    }
+    
+    
+}
+    
     /**
      * 
      * Creates new form ChangePass
@@ -95,9 +108,9 @@ public class ChangePass extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jPasswordField4 = new javax.swing.JPasswordField();
+        newpass = new javax.swing.JPasswordField();
+        newpasscf = new javax.swing.JPasswordField();
+        currentpass = new javax.swing.JPasswordField();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
@@ -105,7 +118,7 @@ public class ChangePass extends javax.swing.JFrame {
         rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Username = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -132,30 +145,30 @@ public class ChangePass extends javax.swing.JFrame {
         jLabel4.setText("Thay Đổi Mật Khẩu");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jPasswordField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jPasswordField1.setToolTipText("");
-        jPasswordField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        newpass.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        newpass.setToolTipText("");
+        newpass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        newpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                newpassActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 350, 42));
+        jPanel1.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 350, 42));
 
-        jPasswordField2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jPasswordField2.setToolTipText("");
-        jPasswordField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 350, 42));
+        newpasscf.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        newpasscf.setToolTipText("");
+        newpasscf.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanel1.add(newpasscf, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 350, 42));
 
-        jPasswordField4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jPasswordField4.setToolTipText("");
-        jPasswordField4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPasswordField4.addActionListener(new java.awt.event.ActionListener() {
+        currentpass.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        currentpass.setToolTipText("");
+        currentpass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        currentpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField4ActionPerformed(evt);
+                currentpassActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 350, 42));
+        jPanel1.add(currentpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 350, 42));
 
         jCheckBox1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jCheckBox1.setText("Hiện/Ẩn");
@@ -222,13 +235,13 @@ public class ChangePass extends javax.swing.JFrame {
         jLabel6.setText("Mật Khẩu Hiện Tại:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Username.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                UsernameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 42));
+        jPanel1.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 42));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 700));
 
@@ -237,49 +250,53 @@ public class ChangePass extends javax.swing.JFrame {
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
-        togglePasswordVi.togglePasswordVisibility(jCheckBox3, jPasswordField1);
+        togglePasswordVi.togglePasswordVisibility(jCheckBox3, newpass);
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-        togglePasswordVi.togglePasswordVisibility(jCheckBox2, jPasswordField4);
+        togglePasswordVi.togglePasswordVisibility(jCheckBox2, currentpass);
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-        togglePasswordVi.togglePasswordVisibility(jCheckBox1, jPasswordField2);
+        togglePasswordVi.togglePasswordVisibility(jCheckBox1, newpasscf);
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void newpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newpassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_newpassActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        HomePage HP = new HomePage();
-        HP.setVisible(true);
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void rSMaterialButtonCircle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle3ActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText("");
-        jPasswordField1.setText("");
-        jPasswordField2.setText("");
-        jPasswordField4.setText("");
     }//GEN-LAST:event_rSMaterialButtonCircle3ActionPerformed
 
-    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
+    private void currentpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_currentpassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField4ActionPerformed
+    }//GEN-LAST:event_currentpassActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_UsernameActionPerformed
 
     private void rSMaterialButtonCircle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle4ActionPerformed
         // TODO add your handling code here:
-        changePassword();
+        String username = Username.getText(); // Lấy từ trường nhập username
+        char[] oldPassword = currentpass.getPassword(); // Lấy từ trường nhập mật khẩu cũ
+        char[] newPassword = newpass.getPassword(); // Lấy từ trường nhập mật khẩu mới
+        char[] confirmPassword = newpasscf.getPassword(); // Lấy từ trường xác nhận mật khẩu mới
+
+        boolean success = changePassword(username, oldPassword, newPassword, confirmPassword);
+        if (success) {
+            System.out.println("Mật khẩu đã được thay đổi thành công.");
+        } else {
+            System.out.println("Thay đổi mật khẩu thất bại.");
+        }
     }//GEN-LAST:event_rSMaterialButtonCircle4ActionPerformed
 
     /**
@@ -318,6 +335,8 @@ public class ChangePass extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Username;
+    private javax.swing.JPasswordField currentpass;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -328,10 +347,8 @@ public class ChangePass extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField newpass;
+    private javax.swing.JPasswordField newpasscf;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle4;
     // End of variables declaration//GEN-END:variables
