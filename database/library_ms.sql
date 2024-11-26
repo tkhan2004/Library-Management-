@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 11:06 AM
+-- Generation Time: Nov 26, 2024 at 12:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,14 +40,16 @@ CREATE TABLE `book_details` (
 
 INSERT INTO `book_details` (`book_id`, `book_name`, `author`, `quantity`) VALUES
 (1, 'The Godather', 'Mario Puzo', 5),
-(2, 'Tây Du Ký', 'Ngô Thừa Ân', 10),
+(2, 'Tây Du Ký', 'Ngô Thừa Ân', 9),
 (3, 'The Great Gatsby', 'Scott Fitzgerald', 6),
 (4, 'LỊCH SỬ ĐẢNG CỘNG SẢN VIỆT NAM', 'Bộ giáo dục và đào đạo', 20),
 (5, 'The Pragmatic Programmer', 'Andy Hunt', 5),
-(6, 'Doraemon: Nobita và chuyến phiêu lưu vào xứ quỷ', 'Fujiko F.Fujio', 10),
+(6, 'Doraemon: Nobita và chuyến phiêu lưu vào xứ quỷ', 'Fujiko F.Fujio', 9),
 (7, 'Truc\'\'s Books', 'Minh Chực', 69),
 (8, 'I-chan is me-chan', 'Nguyễn Tấn Dồng', 6),
-(9, 'Haha', 'Khang', 2);
+(9, 'Haha', 'Khang', 2),
+(10, 'demo', 'abc', 12),
+(11, 'HT', 'HT', 12);
 
 -- --------------------------------------------------------
 
@@ -71,10 +73,9 @@ CREATE TABLE `issue_book_details` (
 --
 
 INSERT INTO `issue_book_details` (`id`, `book_id`, `book_name`, `student_id`, `student_name`, `issue_date`, `due_date`, `status`) VALUES
-(11, 1, 'The Godather', 1, 'Nguyễn Minh Trực', '2024-11-03', '2024-11-30', 'returned'),
-(12, 5, 'The Pragmatic Programmer', 4, 'Nguyễn Gia Cường', '2024-11-03', '2024-11-30', 'pending'),
-(14, 1, 'The Godather', 2, 'Nguyễn Thanh Khang', '2024-11-05', '2024-11-29', 'returned'),
-(15, 5, 'The Pragmatic Programmer', 5, 'Nguyễn Văn A', '2024-11-01', '2024-11-11', 'pending');
+(17, 5, 'The Pragmatic Programmer', 5, 'Nguyễn Văn A', '2024-11-26', '2024-11-27', 'Đang mượn'),
+(19, 2, 'Tây Du Ký', 2, 'Nguyễn Thanh Khang', '2024-11-26', '2024-11-28', 'Đang mượn'),
+(20, 6, 'Doraemon: Nobita và chuyến phiêu lưu vào xứ quỷ', 1, 'Nguyễn Minh Trực', '2024-11-17', '2024-11-25', 'Đã trả');
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,8 @@ CREATE TABLE `staffs` (
 --
 
 INSERT INTO `staffs` (`staff_id`, `staff_fullname`, `staff_username`, `staff_contact`, `staff_password`) VALUES
-(1, 'khang dep trai', 'khangkeke', '123213123123', '1');
+(2, 'khang', 'kekeeeeeee', '333', '1'),
+(3, 'truc', 'truc', '123', '1');
 
 -- --------------------------------------------------------
 
@@ -120,7 +122,8 @@ INSERT INTO `student_details` (`student_id`, `name`, `school_year`, `branch`) VA
 (3, 'Phan Tấn Đồng', '2022 - 2024', 'CN'),
 (4, 'Nguyễn Gia Cường', '2022 - 2024', 'CN'),
 (5, 'Nguyễn Văn A', '2020 - 2024', 'KM'),
-(6, 'Nguyễn Thanh Bình', '2021 - 2025', 'KM');
+(6, 'Nguyễn Thanh Bình', '2021 - 2025', 'KM'),
+(11, 'iiii', '2020 - 2024', 'CN');
 
 -- --------------------------------------------------------
 
@@ -139,19 +142,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`) VALUES
-(5, '1', '1'),
-(6, '1', '1'),
-(7, 'khang', '1'),
-(8, 'khang', '1'),
-(9, 'khang123', '1'),
-(10, 'khang123', '1'),
-(11, 'khang3', '1'),
-(12, 'khang3', '1'),
-(13, 'khang113', '1');
+(7, 'khang', '1');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `issue_book_details`
+--
+ALTER TABLE `issue_book_details`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `staffs`
@@ -168,6 +169,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `issue_book_details`
+--
+ALTER TABLE `issue_book_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
